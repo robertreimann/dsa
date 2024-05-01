@@ -14,11 +14,11 @@ class Dfs:
         if not node:
             return None
         
-        def dfs(v, visited):
-            if v in visited:
+        def dfs(vertex, visited):
+            if vertex in visited:
                 return
-            visited.add(v)
+            visited.add(vertex)
 
-            for neighbor in v.neighbors:
+            for neighbor in vertex.neighbors:
                 dfs(neighbor, visited)
         dfs(node, set())
