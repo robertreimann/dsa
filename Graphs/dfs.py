@@ -1,4 +1,6 @@
 class Dfs:
+    # O(V + E)
+
     # Did you forget something checklist:
     # 1. Did you add a base case?
     # 2. Did you add node to visited set (if you don't know for sure that graph is acyclic)
