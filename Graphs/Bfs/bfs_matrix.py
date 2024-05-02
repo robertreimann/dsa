@@ -2,6 +2,16 @@ from collections import deque
 
 class Bfs:
     # O(V + E)
+
+    # Did you forget something checklist:
+    # 1. Are you popping the node off the left?
+    # 2. Are you checking if it is in visited?
+    # 3. Are you adding new nodes?
+
+    # Standards
+    # 1. Name the deque 'q'
+    # 2. Use functions to check if a node can be added to the queue
+
     def bfs_matrix(self, grid):
         # This traverses the entire matrix, so if you need to not include some values in the
         # traversal then canGoX functions should be modified. For example, in 695. Max Area of Island

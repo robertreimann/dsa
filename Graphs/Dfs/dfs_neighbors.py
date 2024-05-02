@@ -10,7 +10,7 @@ class Dfs:
     # Standards:
     # 1. Use nested dfs function to avoid global variables and having to pass in adjacency lists etc which complicate caching.
     # 2. Pass in a visited set instead of using a global one so the @cache decorator can be slapped on for ez DP.
-    # 3. Name the current node vertex, if tracking index in a list of nodes instead, use index.
+    # 3. Name the current node 'vertex', if tracking index in a list of nodes instead, use 'index'.
 
     def dfs_neighbors(node):
         if not node:
