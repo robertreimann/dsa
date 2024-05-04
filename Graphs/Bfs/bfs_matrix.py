@@ -1,7 +1,12 @@
 from collections import deque
 
 class Bfs:
-    # O(V + E)
+    # General time complexity of BFS is O(|V| + |E|)
+    # Time complexity: O(m*n*4^(m*n)), assuming that we have to start from each and every node in the matrix and potentially
+    #                  traverse the whole matrix each time.
+    # Time complexity: O(m*n), assuming we visit each node in the matrix at most one time
+
+    # Space complexity: O(m*n), assuming we might have to traverse the whole matrix
 
     # Did you forget something checklist:
     # 1. Are you popping the node off the left?

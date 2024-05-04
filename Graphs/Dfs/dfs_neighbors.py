@@ -1,5 +1,6 @@
 class Dfs:
-    # O(V + E)
+    # Time complexity: O(V + E)
+    # Space complexity: O(V)
 
     # Did you forget something checklist:
     # 1. Did you add a base case?
