@@ -3,3 +3,4 @@
 
 06/03/2024:
  - 79. Word Search (x2)
+ - 84. Largest Rectangle in Histogram (x2)
