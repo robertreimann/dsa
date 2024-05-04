@@ -11,6 +11,7 @@ class Bfs:
     # Standards
     # 1. Name the deque 'q'
     # 2. Use functions to check if a node can be added to the queue
+    # 3. Always use inclusive comparison for matrix bound checks, both for 0 and length - 1
 
     def bfs_matrix(self, grid):
         # This traverses the entire matrix, so if you need to not include some values in the
@@ -20,41 +21,17 @@ class Bfs:
         q = deque([(grid[0][0], grid[0][1])])
         while q:
             node = q.popleft()
-            if node in visited:
+            if node in visited or not self.is_in_bounds(grid, node):
                 continue
             visited.add(node)
 
-            if self.canGoLeft(node, grid):
-                q.append((node[0], node[1] - 1))
-            if self.canGoRight(node, grid):
-                q.append((node[0], node[1] + 1))
-            if self.canGoUp(node, grid):
-                q.append((node[0] - 1, node[1]))
-            if self.canGoDown(node, grid):
-                q.append((node[0] + 1, node[1]))
-
-    def canGoLeft(self, node, grid):
-        i, j = node
-        if j == 0:
-            return False
-        return True
-
-    def canGoRight(self, node, grid):
-        i, j = node
-        if j == len(grid[0]) - 1:
-            return False
-        return True
-
-    def canGoUp(self, node, grid):
-        i, j = node
-        if i == 0:
-            return False
-        return True
-
-    def canGoDown(self, node, grid):
-        i, j = node
-        if i == len(grid) - 1:
-            return False
-        return True
-
-        
+            q.append((node[0], node[1] - 1))
+            q.append((node[0], node[1] + 1))            
+            q.append((node[0] - 1, node[1]))
+            q.append((node[0] + 1, node[1]))
+    
+    def is_in_bounds(self, grid, node):
+        row_size = len(grid) - 1
+        column_size = len(grid[0]) - 1
+        row_index, column_index = node
+        return row_index >= 0 and row_index <= row_size and column_index >= 0 and column_index <= column_size
