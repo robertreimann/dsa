@@ -7,7 +7,7 @@ class Dfs:
     # 3. Did you recursively call dfs? (if you forget this then what are you even doing?!)
     # 4. Did you compute and return the answer?
 
-    # Standards:
+    # Standards
     # 1. Use nested dfs function to avoid global variables and having to pass in adjacency lists etc which complicate caching.
     # 2. Pass in a visited set instead of using a global one so the @cache decorator can be slapped on for ez DP.
     # 3. Name the current node 'vertex', if tracking index in a list of nodes instead, use 'index'.
