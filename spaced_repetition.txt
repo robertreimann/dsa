@@ -1,8 +1,9 @@
-06/03/2024:
- - 79. Word Search (x2)
- - 84. Largest Rectangle in Histogram (x2)
  
 07/03/2024:
  - 198. House Robber (x1)
  - 139. Word Break (x2)
  - 309. Best Time to Buy and Sell Stock with Cooldown (x2)
+
+08/03/2024:
+ - 79. Word Search (x2)
+ - 84. Largest Rectangle in Histogram (x2)
