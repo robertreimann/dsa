@@ -9,10 +9,11 @@ class BinarySearch:
     # Use left, right, mid as the pointers
     # Use inclusive comparison for while loop
     # Use integer division to round down mid
+    # Use (left + right) // 2 for mid point
     def binary_search_array(nums, target):
         left, right = 0, len(nums) - 1
         while left <= right:
-            mid = left + (right - left) // 2
+            mid = (left + right) // 2
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target:
