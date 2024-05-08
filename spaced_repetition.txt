@@ -1,7 +1,9 @@
  08/03/2024:
- - 79. Word Search (x2)
- - 84. Largest Rectangle in Histogram (x2)
 
  09/03/2024:
  - 139. Word Break (x2)
  - 309. Best Time to Buy and Sell Stock with Cooldown (x4)
+
+ 10/03/2024:
+ - 84. Largest Rectangle in Histogram (x1)
+ - 79. Word Search (x1)
