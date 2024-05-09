@@ -6,7 +6,7 @@ class ListNode:
 
 class LRUCache:
     #    The idea is to hold values with pointer to the ListNode in the map
-    # 1. Initialize capacity, map, doubly linked list head and tail pointers, with size counter
+    # 1. Initialize capacity, map, doubly linked list head and tail pointers
     # 2. On get, if it is not in map, return -1
     #            otherwise, removeFromList & insertToHead
     # 3. On put, if is in the map:
@@ -15,7 +15,7 @@ class LRUCache:
     #               if capacity is full:
     #                   removeTail
     #               insertToHead 
-    # Create functions, insertToHead, removeFromList, removeTail
+    # Create functions, insertToHead, removeFromList, removeTail, don't forget to adjust tail
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.map = {}
