@@ -5,7 +5,7 @@ class LRUCache:
     # 2. On get, update index of key to be 0 in the queue if it already exists
     #            otherwise, return -1
     # 3. On put, update index of key to be 0 in the queue if it already exists
-    #            othwerwise, delete the last element from map and queue.
+    #            otherwise, delete the last element from map and queue.
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.map = {}
