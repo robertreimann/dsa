@@ -7,3 +7,4 @@
  10/03/2024:
  - 84. Largest Rectangle in Histogram (x1)
  - 79. Word Search (x1)
+ - 146. LRU Cache (x2)
