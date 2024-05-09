@@ -51,15 +51,17 @@ class LRUCache:
     
     def insert_to_head(self, node):
         previous_head = self.dummy.next
-        # Tie it to dummy node
+
+        # Tie it to dummy node as dummy node always points to head
         node.prev = self.dummy
         self.dummy.next = node
+
+        # Tie to previous node
         node.next = previous_head
         if previous_head:
-            # Tie to previous node
             previous_head.prev = node
         else:
-            # if previous_head didn't exist, that means we just added the first element
+            # if previous_head doesn't exist, that means we just added the first element
             # so the head is also the tail
             self.tail = node
     
