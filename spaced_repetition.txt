@@ -13,3 +13,5 @@
  16/03/2024:
  - 1851. Minimum Interval to Include Each Query (x2)
  - 84. Largest Rectangle in Histogram (x1)
+ - 45. Jump Game II (x2)
+ - 134. Gas Station (x2)
