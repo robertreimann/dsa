@@ -1,5 +1,4 @@
  10/03/2024:
- - 84. Largest Rectangle in Histogram (x1)
  - 79. Word Search (x1)
  - 146. LRU Cache (x2)
  - 25. Reverse Nodes in k-Group
@@ -10,3 +9,7 @@
 
  14/03/2024:
  - 295. Find Median from Data Stream
+
+ 16/03/2024:
+ - 1851. Minimum Interval to Include Each Query (x2)
+ - 84. Largest Rectangle in Histogram (x1)
