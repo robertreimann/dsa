@@ -1,5 +1,4 @@
  10/03/2024:
- - 79. Word Search (x1)
  - 146. LRU Cache (x2)
  - 25. Reverse Nodes in k-Group
 
@@ -16,3 +15,5 @@
  - 45. Jump Game II (x2)
  - 134. Gas Station (x2)
  - 2812. Find the Safest Path in a Grid (try the union find + bs solution as well)
+ - Car fleet
+ - Alient dictionary
