@@ -1,4 +1,5 @@
 class Subsets:
+    # The pick, don't pick decision tree approach
     def generate(self, arr):
         subsets = []
         def dfs(i, sub):
@@ -16,6 +17,7 @@ class Subsets:
         dfs(0, [])
         return subsets
     
+    # The generate every subset with the i-th element and then move to the next one approach
     def generate2(self, arr):
         subsets = []
         def dfs(i, sub):
