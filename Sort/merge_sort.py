@@ -1,9 +1,7 @@
-import random
-
-
+# this actually returns a new sorted array instead of sorting in place, no bueno
 class MergeSort:
     def sort(nums):
-        # left incluse, right excluse - [l, r)
+        # left inclusive, right exclusive - [l, r)
         def merge_sort(l, r):
             # base case
             if r - l == 1: 
