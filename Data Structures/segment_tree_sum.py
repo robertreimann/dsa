@@ -1,52 +1,48 @@
-from typing import List
-
-
 class SegmentTree:
-
-    def __init__(self, nums: List[int]) -> None:
+    def __init__(self, nums) -> None:
         self.nums = nums
         self.tree = [0] * (4 * len(nums))
-        self.tr = len(nums) - 1
-        self.build(1, 0, self.tr)
-        
-    def build(self, v, l, r):
-        if l == r:
-            self.tree[v] = self.nums[l]
-            return
-        
-        tm = (l + r) // 2
-        self.build(v * 2, l, tm)
-        self.build(v * 2 + 1, tm + 1, r)
-        self.tree[v] = self.tree[v * 2] + self.tree[v * 2 + 1]
+        self.build()
 
-    def update(self, index, val):
-        def update_tree(v = 1, tl = 0, tr = self.tr):
-            if tl == tr:
-                self.tree[v] = val
+    def build(self):
+        def _build(v = 1, l = 0, r = len(self.nums) - 1):
+            if l == r:
+                self.tree[v] = self.nums[l]
                 return
             
-            tm = (tl + tr) // 2
-            if index <= tm:
-                update_tree(v * 2, tl, tm)
-            else:
-                update_tree(v * 2 + 1, tm + 1, tr)
+            mid = (l + r) // 2
+            _build(v * 2, l, mid)
+            _build(v * 2 + 1, mid + 1, r)
             self.tree[v] = self.tree[v * 2] + self.tree[v * 2 + 1]
-        update_tree()
+        _build()
 
-    def sumRange(self, left, right):
-        def query(l, r, v = 1, tl = 0, tr = self.tr):
-            if l > r:
+    def update(self, index, value):
+        def _update(v = 1, l = 0, r = len(self.nums) - 1):
+            if l == r:
+                self.tree[v] = value
+                return
+            
+            mid = (l + r) // 2
+            if index <= mid:
+                _update(v * 2, l, mid)
+            else:
+                _update(v * 2 + 1, mid + 1, r)
+            self.tree[v] = self.tree[v * 2] + self.tree[v * 2 + 1]
+        _update()
+    
+    def query(self, left, right):
+        def _query(ql, qr, v = 1, l = 0, r = len(self.nums) - 1):
+            if ql > qr:
                 return 0
             
-            if l == tl and r == tr:
+            if ql == l and qr == r:
                 return self.tree[v]
             
-            tm = (tl + tr) // 2
-            left = query(l, min(r, tm), v * 2, tl, tm)
-            right = query(max(l, tm + 1), r, v * 2 + 1, tm + 1, tr)
+            mid = (l + r) // 2
+            left = _query(ql, min(qr, mid), v * 2, l, mid)
+            right = _query(max(ql, mid + 1), qr, v * 2 + 1, mid + 1, r)
             return left + right
-        
-        return query(left, right)
+        return _query(left, right)
 
 tree = SegmentTree([1,3,5])
 
@@ -54,7 +50,7 @@ tree = SegmentTree([1,3,5])
 print(tree.tree)
 
 # 9
-print(tree.sumRange(0,2))
+print(tree.query(0,2))
 
 tree.update(1, 2)
 
@@ -62,4 +58,4 @@ tree.update(1, 2)
 print(tree.tree)
 
 # 8
-print(tree.sumRange(0,2))
+print(tree.query(0,2))
