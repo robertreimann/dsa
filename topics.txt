@@ -1,0 +1,9 @@
+- number theory:
+    - divisors
+    - factorization
+    - modular arithmetic
+    - greatest common divisor / least common multiplier
+    - prime factor
+- combinatorics
+- segment trees
+- the odd DP thing where you two inclusive/exclusive or something (https://leetcode.com/problems/find-all-possible-stable-binary-arrays-i/description/)

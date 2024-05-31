@@ -1,25 +1,22 @@
- 10/03/2024:
- - 146. LRU Cache (x2)
- - 25. Reverse Nodes in k-Group
-
- 11/03/2024:
  - 139. Word Break (x2)
+ - 121. Best Time to Buy and Sell Stock (series)
  - 309. Best Time to Buy and Sell Stock with Cooldown (x3)
-
- 14/03/2024:
  - 295. Find Median from Data Stream
-
- 16/03/2024:
  - 1851. Minimum Interval to Include Each Query (x2)
- - 84. Largest Rectangle in Histogram (x1)
  - 45. Jump Game II (x2)
  - 134. Gas Station (x2)
  - 2812. Find the Safest Path in a Grid (try the union find + bs solution as well)
  - Car fleet
- - Alient dictionary
- - 763. Partition Labels
+ - Alien dictionary
  - 678. Valid Parenthesis String !brand new concept, range!
  - 979. Distribute Coins in Binary Tree (couldn't solve)
  - 305. Number of Islands II
  - 2863. Maximum Length of Semi-Decreasing Subarrays
  - Quickselect /hoare
+ - 2316. Count Unreachable Pairs of Nodes in an Undirected Graph
+ - 3164. Find the Number of Good Pairs II
+ - 715. Range Module
+ - 85. Maximal Rectangle
+
+3rd of June
+  - 146. LRU Cache (x1)

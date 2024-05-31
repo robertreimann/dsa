@@ -1,0 +1,18 @@
+Commutative operations (order does not matter):
+    - Multiplication            | x * y == y * x
+    - Addition                  | x + y == y + x
+    - Bitwise XOR               | x ^ y == y ^ x
+    - Bitwise AND               | x & y == y & x
+    - Bitwise OR                | x | y == y | x
+
+Non-commutative operations (order DOES matter):
+    - Subtraction               | x - y != y - x
+    - Division                  | x / y != y / x
+
+Associative (re-assign parentheses at will):
+    - Addition                  | (x + y) + z == x + (y + z)
+    - Multiplication            | (x * y) * z == x * (y * z)
+    - String concatenation      | ("hello" + " ") + "world" == "hello" + (" " + "world")
+    - Greatest common divisor   | gcd(x, gcd(y, z)) == gcd(gcd(x, y), z) == gcd(x, y, z)
+    - Least common multiplier   | lcm(x, lcm(y, z)) == lcm(lcm(x, y), z) == lcm(x, y, z)
+    
