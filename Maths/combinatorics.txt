@@ -1,0 +1,4 @@
+Permutations / nPr / n choose k where order matters:
+    - n! / (n - k)! or if repeats allowed, then n^k
+Combinations / nCr / n choose k where order doesn't matter:
+    - n! / k!(n - k)! or if repeats allowed, then (k + n - 1)!/ k!(n - 1)!
